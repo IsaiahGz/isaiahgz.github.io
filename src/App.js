@@ -23,7 +23,7 @@ function App() {
 	};
 
 	return (
-		<div>
+		<div className='bg-slate-200 h-screen'>
 			<Header currentPage={currentPage} setCurrentPage={setCurrentPage} navChoices={navChoices} />
 			{renderPage()}
 		</div>
