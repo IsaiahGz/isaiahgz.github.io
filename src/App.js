@@ -3,6 +3,7 @@ import Header from './components/Header';
 import AboutMe from './pages/AboutMe';
 import Portfolio from './pages/Portfolio';
 import Contact from './pages/Contact';
+import Resume from './pages/Resume';
 
 const navChoices = ['About Me', 'Portfolio', 'Contact', 'Resume'];
 
@@ -17,8 +18,8 @@ function App() {
 				return <Portfolio />;
 			case 'Contact':
 				return <Contact />;
-			// case 'Resume':
-			// 	return <Resume />;
+			case 'Resume':
+				return <Resume />;
 			default:
 				return <AboutMe />;
 		}
