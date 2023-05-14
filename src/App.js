@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Header from './components/Header';
 import AboutMe from './pages/AboutMe';
+import Portfolio from './pages/Portfolio';
 
 const navChoices = ['About Me', 'Portfolio', 'Contact', 'Resume'];
 
@@ -11,8 +12,8 @@ function App() {
 		switch (currentPage) {
 			case 'About Me':
 				return <AboutMe />;
-			// case 'Portfolio':
-			// 	return <Portfolio />;
+			case 'Portfolio':
+				return <Portfolio />;
 			// case 'Contact':
 			// 	return <Contact />;
 			// case 'Resume':
