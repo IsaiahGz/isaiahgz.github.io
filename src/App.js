@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Header from './components/Header';
 import AboutMe from './pages/AboutMe';
 import Portfolio from './pages/Portfolio';
+import Contact from './pages/Contact';
 
 const navChoices = ['About Me', 'Portfolio', 'Contact', 'Resume'];
 
@@ -14,8 +15,8 @@ function App() {
 				return <AboutMe />;
 			case 'Portfolio':
 				return <Portfolio />;
-			// case 'Contact':
-			// 	return <Contact />;
+			case 'Contact':
+				return <Contact />;
 			// case 'Resume':
 			// 	return <Resume />;
 			default:
