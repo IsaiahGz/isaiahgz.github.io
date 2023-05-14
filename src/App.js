@@ -4,6 +4,7 @@ import AboutMe from './pages/AboutMe';
 import Portfolio from './pages/Portfolio';
 import Contact from './pages/Contact';
 import Resume from './pages/Resume';
+import Footer from './components/Footer';
 
 const navChoices = ['About Me', 'Portfolio', 'Contact', 'Resume'];
 
@@ -26,9 +27,10 @@ function App() {
 	};
 
 	return (
-		<div className='bg-slate-200 h-full'>
+		<div className='relative min-h-screen bg-slate-200'>
 			<Header currentPage={currentPage} setCurrentPage={setCurrentPage} navChoices={navChoices} />
-			{renderPage()}
+			<div className='py-4'>{renderPage()}</div>
+			<Footer />
 		</div>
 	);
 }
