@@ -29,7 +29,7 @@ function App() {
 	return (
 		<div className='relative min-h-screen bg-slate-200'>
 			<Header currentPage={currentPage} setCurrentPage={setCurrentPage} navChoices={navChoices} />
-			<div className='py-4'>{renderPage()}</div>
+			<div className='pb-8'>{renderPage()}</div>
 			<Footer />
 		</div>
 	);
