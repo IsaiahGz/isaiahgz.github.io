@@ -3,6 +3,10 @@ import React, { useState } from 'react';
 export default function Contact() {
 	const [formState, setFormState] = useState({ name: '', email: '', message: '' });
 
+	const handleFormChange = (e) => {
+		setFormState({ ...formState, [e.target.name]: e.target.value });
+	};
+
 	return (
 		<div className='container mx-auto mt-8 p-4'>
 			<h2 className='text-lg md:text-2xl text-slate-800'>Contact me</h2>
@@ -10,9 +14,6 @@ export default function Contact() {
 				onSubmit={(e) => {
 					e.preventDefault();
 					setFormState({ name: '', email: '', message: '' });
-				}}
-				onChange={(e) => {
-					setFormState({ ...formState, [e.target.name]: e.target.value });
 				}}
 			>
 				<label className='block text-slate-800 mt-4' htmlFor='name'>
@@ -25,6 +26,7 @@ export default function Contact() {
 					id='name'
 					required
 					value={formState.name}
+					onChange={handleFormChange}
 				/>
 				<label className='block text-slate-800 mt-4' htmlFor='email'>
 					Email
@@ -36,6 +38,7 @@ export default function Contact() {
 					id='email'
 					required
 					value={formState.email}
+					onChange={handleFormChange}
 				/>
 				<label className='block text-slate-800 mt-4' htmlFor='message'>
 					Message
@@ -47,6 +50,7 @@ export default function Contact() {
 					rows='5'
 					required
 					value={formState.message}
+					onChange={handleFormChange}
 				/>
 				<button className='block bg-cyan-700 hover:bg-cyan-800 text-white rounded-md p-2 mt-4' type='submit'>
 					Submit
