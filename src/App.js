@@ -1,13 +1,12 @@
 import { useState } from 'react';
 import Header from './components/Header';
-import AboutMe from './pages/AboutMe';
-import Portfolio from './pages/Portfolio';
-import Contact from './pages/Contact';
-import Resume from './pages/Resume';
+import AboutMe from './components/AboutMe';
+import Portfolio from './components/Portfolio';
+import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 
-const navChoices = ['About Me', 'Portfolio', 'Contact', 'Resume'];
+const navChoices = ['About Me', 'Portfolio', 'Contact'];
 
 function App() {
 	const [currentPage, setCurrentPage] = useState(navChoices[0]);
@@ -20,8 +19,6 @@ function App() {
 				return <Portfolio />;
 			case 'Contact':
 				return <Contact />;
-			case 'Resume':
-				return <Resume />;
 			default:
 				return <AboutMe />;
 		}
