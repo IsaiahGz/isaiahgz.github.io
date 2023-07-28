@@ -5,6 +5,7 @@ import Portfolio from './pages/Portfolio';
 import Contact from './pages/Contact';
 import Resume from './pages/Resume';
 import Footer from './components/Footer';
+import Navbar from './components/Navbar';
 
 const navChoices = ['About Me', 'Portfolio', 'Contact', 'Resume'];
 
@@ -28,8 +29,12 @@ function App() {
 
 	return (
 		<div className='relative min-h-screen bg-slate-200'>
-			<Header currentPage={currentPage} setCurrentPage={setCurrentPage} navChoices={navChoices} />
-			<div className='pb-8'>{renderPage()}</div>
+			<Navbar navChoices={navChoices} />
+			<Header />
+			{/* <div className='pb-8'>{renderPage()}</div> */}
+			<AboutMe />
+			<Portfolio />
+			<Contact />
 			<Footer />
 		</div>
 	);
