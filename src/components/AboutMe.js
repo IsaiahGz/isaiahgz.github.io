@@ -24,12 +24,12 @@ export default function AboutMe() {
 					.
 				</p>
 			</div> */}
+			<h2 className='text-5xl text-slate-800 mb-10'>About Me</h2>
 			<div className='flex flex-wrap'>
-				<div className='w-full lg:w-1/2 mb-10 lg:mb-0 flex flex-col items-center'>
-					<h2 className='text-5xl text-slate-800 mb-8'>About Me</h2>
+				<div className='w-full lg:w-1/4 mb-10 lg:mb-0 flex flex-col items-center'>
 					<img className='w-40 lg:w-52 h-40 lg:h-52 rounded-full object-cover' src={profilePicture} alt='Profile' />
 				</div>
-				<div className='w-full lg:w-1/2'>
+				<div className='w-full lg:w-3/4'>
 					<p className='text-lg text-slate-800'>
 						My name is Isaiah Galarza and I am a full stack web developer with a passion for learning and problem solving. I am
 						a team player and I am always looking for ways to improve myself and my team. I have a degree in Computer Science as
