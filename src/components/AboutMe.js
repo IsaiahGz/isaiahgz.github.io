@@ -27,7 +27,7 @@ export default function AboutMe() {
 			<div className='flex flex-wrap'>
 				<div className='w-full lg:w-1/2 mb-10 lg:mb-0 flex flex-col items-center'>
 					<h2 className='text-5xl text-slate-800 mb-8'>About Me</h2>
-					<img className='w-40 h-40 rounded-full object-cover' src={profilePicture} alt='Profile' />
+					<img className='w-40 lg:w-52 h-40 lg:h-52 rounded-full object-cover' src={profilePicture} alt='Profile' />
 				</div>
 				<div className='w-full lg:w-1/2'>
 					<p className='text-lg text-slate-800'>
