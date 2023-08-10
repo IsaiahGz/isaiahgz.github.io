@@ -1,44 +1,27 @@
 import React from 'react';
-import GithubLogo from '../images/github-mark-white.svg';
-import GithubDarkLogo from '../images/github-mark.svg';
+import { FaArrowUpRightFromSquare, FaGithub } from 'react-icons/fa6';
 
-export default function Project({ title, description, image, deployedLink, githubLink }) {
-	let isPhone = false;
-	// Check if the user is on a mobile device since you cant hover on mobile
-	// From: https://dev.to/timhuang/a-simple-way-to-detect-if-browser-is-on-a-mobile-device-with-javascript-44j3
-	if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-		isPhone = true;
-	}
+export default function Project({ title, description, image, deployedLink, githubLink, alternate = false }) {
 	return (
-		<div className='w-full lg:w-1/2 p-1 md:p-4'>
-			<div className=' p-2 md:p-4 rounded-lg'>
-				<h3>
-					<a className='text-sky-700 text-base md:text-2xl' href={deployedLink}>
-						{title}
+		<div className={`w-full flex flex-wrap ${alternate && 'flex-row-reverse'} my-4`}>
+			<div className='w-full xl:w-7/12 flex justify-center items-center'>
+				<img src={image} alt='Project screenshot' className=' aspect-video' />
+			</div>
+
+			<div className='w-full xl:w-5/12 p-4 bg-primary'>
+				<a href={deployedLink} target='_blank' rel='noreferrer' className='block w-fit'>
+					<h3 className='text-accent text-base lg:text-2xl inline-block'>{title}</h3>
+					<FaArrowUpRightFromSquare className='inline-block text-accent text-2xl align-baseline ml-2' />
+				</a>
+				<p className='text-background text-base lg:text-lg'>{description}</p>
+				<div className='bottom-0 left-0 mt-4'>
+					<a href={deployedLink} target='_blank' rel='noreferrer'>
+						<FaArrowUpRightFromSquare className='text-secondary inline-block mr-2 text-4xl' />
 					</a>
-				</h3>
-				<div className=' my-1 aspect-video bg-cover' style={{ backgroundImage: `url(${image})` }}>
-					{!isPhone && (
-						<div className='opacity-0 hover:opacity-95 transition w-full h-full p-4 bg-gray-800'>
-							<p className='text-gray-100 mb-2'>{description}</p>
-							<div className='w-fit'>
-								<a href={githubLink}>
-									<img className='w-10' src={GithubLogo} alt='GitHub link' />
-								</a>
-							</div>
-						</div>
-					)}
+					<a href={githubLink} target='_blank' rel='noreferrer'>
+						<FaGithub className='text-secondary inline-block text-4xl' />
+					</a>
 				</div>
-				{isPhone && (
-					<>
-						<p>{description}</p>
-						<div className='w-fit'>
-							<a href={githubLink}>
-								<img className='w-10 fill-gray-800' src={GithubDarkLogo} alt='GitHub link' />
-							</a>
-						</div>
-					</>
-				)}
 			</div>
 		</div>
 	);
