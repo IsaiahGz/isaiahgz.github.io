@@ -1,5 +1,5 @@
 import React from 'react';
-import profilePicture from '../images/profile_pic.jpg';
+import profilePicture from '../images/profile-pic.jpg';
 
 export default function AboutMe() {
 	return (
@@ -7,7 +7,7 @@ export default function AboutMe() {
 			<h2 className='text-5xl text-slate-800 mb-10'>About Me</h2>
 			<div className='flex flex-wrap'>
 				<div className='w-full lg:w-1/4 mb-10 lg:mb-0 flex flex-col items-center'>
-					<img className='w-40 lg:w-52 h-40 lg:h-52 rounded-full object-cover' src={profilePicture} alt='Profile' />
+					<img className='w-40 lg:w-52 h-40 lg:h-52 rounded-full object-cover object-top' src={profilePicture} alt='Profile' />
 				</div>
 				<div className='w-full lg:w-3/4'>
 					<p className='text-lg text-slate-800'>
