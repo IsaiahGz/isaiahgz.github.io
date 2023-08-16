@@ -31,9 +31,9 @@ const projects = [
 	},
 ];
 
-export default function Portfolio() {
+export default function Portfolio({ scrollRef }) {
 	return (
-		<div className='container mx-auto mt-8'>
+		<div ref={scrollRef} className='container mx-auto pt-28 p-2'>
 			<h2 className='text-5xl text-slate-800'>Portfolio</h2>
 			<div className='flex flex-wrap mt-2 md:mt-6'>
 				{projects.map((project, idx) => (

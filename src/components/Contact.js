@@ -1,6 +1,6 @@
-export default function Contact() {
+export default function Contact({ scrollRef }) {
 	return (
-		<div className='container mx-auto mt-8 pb-24'>
+		<div ref={scrollRef} className='container mx-auto mt-8 pb-24 p-2'>
 			<h2 className='text-5xl text-slate-800 mb-5'>Contact me</h2>
 			<p className='text-lg'>
 				Feel free to reach out to me using{' '}

@@ -1,9 +1,9 @@
 import React from 'react';
 import profilePicture from '../images/profile-pic.jpg';
 
-export default function AboutMe() {
+export default function AboutMe({ scrollRef }) {
 	return (
-		<div className='container mx-auto mt-20'>
+		<div ref={scrollRef} className='container mx-auto pt-16 md:pt-32 py-2'>
 			<h2 className='text-5xl text-slate-800 mb-10'>About Me</h2>
 			<div className='flex flex-wrap'>
 				<div className='w-full lg:w-1/4 mb-10 lg:mb-0 flex flex-col items-center'>

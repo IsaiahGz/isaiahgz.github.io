@@ -10,7 +10,7 @@ export default function Project({ title, description, image, deployedLink, githu
 
 			<div className='w-full xl:w-5/12 p-4 bg-primary'>
 				<a href={deployedLink} target='_blank' rel='noreferrer' className='block w-fit'>
-					<h3 className='text-accent text-base lg:text-2xl inline-block'>{title}</h3>
+					<h3 className='text-accent text-2xl inline-block'>{title}</h3>
 					<FaArrowUpRightFromSquare className='inline-block text-accent text-2xl align-baseline ml-2' />
 				</a>
 				<p className='text-background text-base lg:text-lg'>{description}</p>
